@@ -1,0 +1,341 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    margin-top: 82px;
+    background-color: antiquewhite;
+}
+
+/*RESETEO DE LISTAS O LETRAS */
+ol,ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/*ELEMENTOS DEL HEADER*/
+header{
+    background-color: rgb(100, 100, 100);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 2em 0.5em 2em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+header a i{
+    color: white;
+    font-size: 3em;
+    padding: 0.2em;
+}
+header nav ul{
+    display: flex;
+    gap: 1.1em;
+}
+header nav ul li a{
+    color: white;
+}
+
+/*ELEMENTOS DE MAIN*/
+/*SECTION 1 Y SECTION 2*/
+.section-1{
+    display: flex;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+.section-2 img{
+    width: 100%;
+}
+
+.acerca-de{
+    padding: 2em;
+    font-size: 20px;
+}
+.acerca-de p{
+    padding: 0.3em;
+}
+.acerca-imagen{
+    padding: 2em;
+}
+.acerca-imagen img{
+    border-radius: 1em;
+}
+
+
+/*SECTION 03*/
+.section-3{
+    width: 90%;
+    margin: 50px auto;
+    
+}
+.section-titulo{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.notas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+.nota{
+    width: 30%;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+    transition: 0.3s;
+    /* padding: 1em; */
+}
+.nota-header{
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 15px;
+    background: linear-gradient(to right, #f06686, #ff4b2b);
+}
+.nota-img img{
+    width: 100%;
+    
+    max-height: 250px;
+    display: block;
+}
+
+.nota-body{ 
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #a4d1fd;
+}
+.nota-body .boton{
+    display: block;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    margin-top: 10px;
+    padding: 10px 5px;
+
+}
+/*SECTION 04*/
+/* ------------------------------------------------- */
+/* --------------------Formulario ------------------ */
+.section-4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-4 h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.formulario{
+    background-color: #f6f7f8;
+    border: 1px solid #d6d9dc;
+    border-radius: 1em;
+
+    width: 50%;
+    padding: 50px;
+    margin: 30px 0 40px 0;
+}
+/* ------------- Campos del Formulario ------------- */
+.form-row{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.form-row input[type="text"],
+.form-row input[type="email"]{
+  background-color: #bdbdbd;
+  border: 0;
+  border-radius: 6px;
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+}
+.form-row label{
+    margin-bottom: 3px;
+    text-align:initial;
+}
+.form-row textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  
+    background-color: #bdbdbd;
+    border: 0;
+    border-radius: 6px;
+  
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 7px;
+    resize: none;
+  
+    width: 100%;
+}
+.form-row button{
+    font-size: 16px;
+    font-weight: bold;
+  
+    color: #ffffff;
+    background-color: #5995da;
+  
+    border: none;
+    border-radius: 3px;
+  
+    padding: 10px 40px;
+    cursor: pointer;
+}
+.form-row button:hover {
+    background-color: #0a5bb8;
+}
+.form-row button:active {
+    background-color: #8a40c7;
+}
+/*ELEMENTOS DE FOOTER*/
+#footer{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.titulo-contactos{
+    margin-bottom: 10px;
+}
+.elementos-contactos{
+    display: flex;
+    justify-content: center;
+}
+.elementos-contactos nav ul {
+    padding: 0;    
+}
+.elementos-contactos nav ul li{
+    display: inline-block;
+    margin: 10px;
+}
+.elementos-contactos nav ul li a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.elementos-contactos nav ul li a i {
+    font-size: 24px;
+}
+
+/*POSICIONAR UN ELEMENTO FIJO*/
+#imagen-fija{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 5em;
+    height: 5em;
+    padding: 1em;
+}
+
+/*MENU HAMBURGUESA*/
+#check{
+    display: none;
+}
+.checkbtn{
+    font-size: 25px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+} 
+
+
+
+/*ESTILOS PARA PANTALLAS PEQUEÑAS*/
+/*PARA ENCABEZADO*/
+@media (max-width: 768px){
+    header{
+        background-color: rgb(52, 52, 240);
+    }
+    .acerca-de{
+        text-align: center;
+        font-size: 20px;
+    }
+    .acerca-imagen{
+        margin-bottom: 40px;
+    }
+    .section-1 {
+        flex-wrap: wrap;
+        background-color: rgb(17, 214, 214);
+        padding: 1em;
+        font-size: medium;
+    }
+    .checkbtn{
+        display: block;
+    }
+    #encabezado ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(100, 100, 100);
+        text-align: center;
+    
+        top: 80px;
+        left: 100%;
+        transition: all 0.5s;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+        display: block;
+    }
+    #encabezado nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height:30px;
+    }
+    #encabezado nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked~ .checkbtn{
+        color: #2c3e50;
+    }
+}
+
+/* @media (max-width:768px){
+    .notas{
+        flex-direction: column;
+        font-size: 15px;
+        margin: 4em;
+    }
+    .notas img{
+        width: 300px;
+        height: 250px;
+    }
+} */
+@media screen and (max-width: 1000px) {
+  .nota {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .section-3 {
+    width: 100%;
+  }
+  .nota {
+    width: 80%;
+  }
+}
