@@ -2,6 +2,7 @@
     --primary: #F4BD50;
     --background: #191919;
     --navbar-height: 48px;
+
 }
 *{
     padding: 0;
@@ -69,7 +70,7 @@ header nav ul li a{
 
 /*Sirve para darle ese estilo en los navegadores
 en su borde*/
-.menu>li {
+.menu li {
     display: flex;
     position: relative;
     cursor: pointer;
