@@ -1,3 +1,8 @@
+:root {
+    --primary: #F4BD50;
+    --background: #191919;
+    --navbar-height: 48px;
+}
 *{
     padding: 0;
     margin: 0;
@@ -9,9 +14,9 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: "Madimi One", sans-serif;
-    font-weight: 200;
-    font-style: normal;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-style:  normal;
     margin-top: 82px;
     background-color: antiquewhite;
 }
@@ -26,7 +31,7 @@ a{
 
 /*ELEMENTOS DEL HEADER*/
 header{
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(54, 53, 53);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,10 +40,24 @@ header{
     width: 100%;
     top: 0;
 }
+.tituloweb {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.tituloweb .titulop{
+    font-size: 2.5em;
+}
+header a{
+    color: white;
+}
 header a i{
     color: white;
     font-size: 3em;
     padding: 0.2em;
+}
+header nav ul li{
+    font-size: 1.25em;
 }
 header nav ul{
     display: flex;
@@ -46,6 +65,49 @@ header nav ul{
 }
 header nav ul li a{
     color: white;
+}
+
+/*Sirve para darle ese estilo en los navegadores
+en su borde*/
+.menu>li {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+.menu li a {
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
+    /* background-image: linear-gradient(to right,var(--primary),var(--primary) 50%,white 50%); */
+    background-image: linear-gradient(to right, #F4BD50, #F4BD50 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 0.2rem 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+.menu li a:before {
+    content: '';
+    background: var(--primary);
+    display: block;
+    position: absolute;
+    bottom: -0.125rem;
+    left: 0;
+    width: 0;
+    height: 0.125rem;
+    transition: all 0.2s ease-in-out;
+}
+.menu li a:hover {
+    background-position: 0;
+}
+.menu li a:hover::before {
+    width: 100%;
 }
 
 /*ELEMENTOS DE MAIN*/
@@ -278,6 +340,7 @@ header nav ul li a{
 @media (max-width: 768px){
     header{
         background-color: rgb(52, 52, 240);
+        padding: 0.5em 1em 0.5em 1em;
     }
     .acerca-de{
         text-align: center;
